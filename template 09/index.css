@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    z-index: 888;
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    font-size: 1.5rem;
+    background: rgba(236, 236, 236, 0.842);
+    height: 4em;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(2px);
+}
+
+header .nav-bar-toggle{
+    display: none;
+    cursor: pointer;
+}
+header .nav-bar-toggle > #icon-btn{
+    font-size: 3rem;
+}
+header > .cs > ul{
+    display: flex;
+    list-style: none;
+    gap: 3em;
+}
+header > .cs > ul > li > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+header > .cs > ul > li > a > i{
+    display: none;
+}
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    padding: 80px 5% 5% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+}
+.hero > .content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 50%;
+}
+.hero > .content > .btn1{
+    border: none;
+    background-color: rgb(113, 113, 197);
+    color: aliceblue;
+    font-size: 1.5rem;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    width: 200px;
+}
+.hero > .ctn-img > img{
+    width: 50rem;
+}
+
+.carts{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carts > .heading1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.coursel .carousel-control-prev{
+    color: aqua;
+}
+
+footer{
+    bottom: 0%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+footer > .logo-g{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+footer > .logo-g > img{
+    width: 50px;
+}
+footer > .social > ul{
+    display: flex;
+    list-style: none;
+}
+footer > .social > ul > li{
+    padding: 0 3em;
+    border-right: 2px solid black;
+}
+footer > .social > ul > li:last-child{
+    border: none;
+}
+footer > .social > ul > li > a{
+    text-decoration: none;
+    font-size: 2rem;
+}
+footer > .copy{
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+footer > .copy > .para{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 58em){
+    .hero{
+        flex-direction: column;
+    }
+    .hero > .content{
+        width: 100%;
+    }
+    .hero > .content > .btn1{
+        width: 100%;
+    }
+    footer > .social > ul > li > a{
+        font-size: 1.5rem;
+    }
+    footer > .copy > .para{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 40em) {
+    header > .nav-bar-toggle{
+        position: absolute;
+        z-index: 9999;
+        color: rgb(0, 0, 0);
+        width: auto;
+        right: 1em;
+        top: 0.5em;
+    }
+    header > .nav-bar-toggle{
+        display: flex;
+    }
+
+    #icon-btn[name="right-arrow"]{
+        display: none;
+    }
+    #icon-btn[name="hamberger"]{
+        display: block;
+    }
+    
+    .click #icon-btn[name="right-arrow"]{
+        display: block;
+        color: aliceblue;
+    }
+    .click #icon-btn[name="hamberger"]{
+        display: none;
+    }
+
+    header > .cs{
+        position: fixed;
+        inset: 0 0 0 30%;
+        background: rgba(3, 3, 3, 0.733);
+        backdrop-filter: blur(2px);
+        padding: min(30vh,8rem) 0;
+        height: 100vh;        
+        transform: translateX(100%);
+        transition: 350ms ease-in;
+    }
+
+    .cs[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    
+    header > .cs > ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    header > .cs > ul > li > a{
+        width: 100%;
+        display: flex;
+        gap: 2em;
+        font-size: larger;
+        padding: 1em 2.5em;
+        color: aliceblue;
+    }
+    header > .cs > ul > li > a > i{
+        display: block;
+    }
+
+    header > .cs > ul > li:hover,
+    header > .cs > ul > li:active{
+        background-color: rgba(255, 255, 255, 0.644);
+    }
+    header > .cs > ul > li > a:hover,
+    header > .cs > ul > li > a:active{
+        color: rgb(0, 0, 0);
+    }
+    footer > .social > ul > li > a{
+        font-size: 1.2rem;
+    }
+}
